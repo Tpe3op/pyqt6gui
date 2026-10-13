@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgSql</class>
+ <widget class="QDialog" name="dlgSql">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1028</width>
+    <height>607</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Employee Database</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>5</y>
+     <width>1020</width>
+     <height>595</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="lyMain">
+    <item>
+     <layout class="QVBoxLayout" name="lyLeft">
+      <item>
+       <widget class="QListWidget" name="lstEmployee"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="text">
+         <string>Add Employee</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnUpdate">
+        <property name="text">
+         <string>Update Employee</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text">
+         <string>Delete Employee</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tblEmployees">
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignTrailing|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>First</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Last</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Email</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignJustify|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignJustify|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Position</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignJustify|AlignVCenter</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Supervisor</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignJustify|AlignVCenter</set>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

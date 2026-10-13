@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu Demo</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="ledMessage">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>171</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Enter a message to display</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDisplay">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>130</y>
+      <width>113</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Message</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="sbxMsec">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>90</y>
+      <width>113</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="suffix">
+     <string> msec</string>
+    </property>
+    <property name="minimum">
+     <number>500</number>
+    </property>
+    <property name="maximum">
+     <number>5000</number>
+    </property>
+    <property name="singleStep">
+     <number>500</number>
+    </property>
+    <property name="value">
+     <number>2500</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuExamples">
+    <property name="title">
+     <string>Examples</string>
+    </property>
+    <widget class="QMenu" name="menuDialog">
+     <property name="title">
+      <string>Dialog</string>
+     </property>
+     <widget class="QMenu" name="menuQMessage_Box">
+      <property name="title">
+       <string>QMessage Box</string>
+      </property>
+      <addaction name="actioninformation"/>
+      <addaction name="actionwarning"/>
+      <addaction name="actioncritical"/>
+      <addaction name="actionquestion"/>
+     </widget>
+     <addaction name="menuQMessage_Box"/>
+     <addaction name="actionQImputDialog"/>
+     <addaction name="actionQFileDialog"/>
+    </widget>
+    <addaction name="menuDialog"/>
+    <addaction name="actionSimple_Widgets"/>
+    <addaction name="actionLayouts"/>
+    <addaction name="actionAdvanced_Widgets"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExamples"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionQuit"/>
+   <addaction name="separator"/>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionHelp"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../Downloads/pyqt5/fotos/add-file.png</normaloff>../../../../Downloads/pyqt5/fotos/add-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Click here for a new project</string>
+   </property>
+   <property name="statusTip">
+    <string>New Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../Downloads/pyqt5/fotos/open-folder.png</normaloff>../../../../Downloads/pyqt5/fotos/open-folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open new project</string>
+   </property>
+  </action>
+  <action name="actionSimple_Widgets">
+   <property name="text">
+    <string>Simple Widgets</string>
+   </property>
+  </action>
+  <action name="actionLayouts">
+   <property name="text">
+    <string>Layouts</string>
+   </property>
+  </action>
+  <action name="actionAdvanced_Widgets">
+   <property name="text">
+    <string>Advanced Widgets</string>
+   </property>
+  </action>
+  <action name="actionQImputDialog">
+   <property name="text">
+    <string>QImputDialog</string>
+   </property>
+  </action>
+  <action name="actionQFileDialog">
+   <property name="text">
+    <string>QFileDialog</string>
+   </property>
+  </action>
+  <action name="actioninformation">
+   <property name="text">
+    <string>information</string>
+   </property>
+  </action>
+  <action name="actionwarning">
+   <property name="text">
+    <string>warning</string>
+   </property>
+  </action>
+  <action name="actioncritical">
+   <property name="text">
+    <string>critical</string>
+   </property>
+  </action>
+  <action name="actionquestion">
+   <property name="text">
+    <string>question</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../Downloads/pyqt5/fotos/remove.png</normaloff>../../../../Downloads/pyqt5/fotos/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit project</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../../Downloads/pyqt5/fotos/question.png</normaloff>../../../../Downloads/pyqt5/fotos/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogMain</class>
+ <widget class="QDialog" name="DialogMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>357</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>My GUI</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>541</width>
+     <height>330</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>My Gui Widgets</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>54</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="dateTimeEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>201</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2026</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>270</width>
+      <height>260</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Jedan</string>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dva</string>
+     </property>
+     <property name="font">
+      <font>
+       <underline>true</underline>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tri</string>
+     </property>
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Četiri</string>
+     </property>
+     <property name="background">
+      <brush brushstyle="NoBrush">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </property>
+     <property name="foreground">
+      <brush brushstyle="NoBrush">
+       <color alpha="255">
+        <red>255</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>220</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="sliderPosition">
+     <number>25</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>220</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>530</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Type something here</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>530</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>groupBox</tabstop>
+  <tabstop>listWidget</tabstop>
+  <tabstop>dateTimeEdit</tabstop>
+  <tabstop>horizontalSlider</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label_2</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
